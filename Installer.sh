@@ -34,7 +34,7 @@ function Ngrok {
         read -p"$YELLOW[INTERCEPTOR]$WHITE-->" token
 	done
 	printf "\n\n${WHITE}CONFIGURING NGROK AUTHTOKEN..."
-	ngrok authtoken $token
+	$ngrok config add-authtoken $token
 	sleep 3
 	printf "\n\n${WHITE}NGROK CONFIGURED SUCCESSFULLY"
 
